@@ -20,7 +20,6 @@ const resources = {
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
-  .use(LanguageDetector) // detect user language
   .init({
     resources,
     fallbackLng: 'en', // use en if detected lng is not available
