@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import Navigation from './Navigation'
-import HeroContent from './HeroContent'
+import { useState } from "react";
+import Navigation from "./Navigation";
+import HeroContent from "./HeroContent";
 
-
-export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-        <Navigation mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
-        <HeroContent />
+      <Navigation
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
+      <HeroContent />
     </>
   );
 }
