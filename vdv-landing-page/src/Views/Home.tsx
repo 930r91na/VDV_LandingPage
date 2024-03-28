@@ -1,6 +1,9 @@
+import React from 'react'
 import { useState } from "react";
 import Navigation from "./Navigation";
 import HeroContent from "./HeroContent";
+import OurTeam from "./OurTeam";
+import EmblaCarouselTestimonials from "./Testimonials";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,6 +15,8 @@ export default function Home() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <HeroContent />
+      <OurTeam />
+      <EmblaCarouselTestimonials />
     </>
   );
 }

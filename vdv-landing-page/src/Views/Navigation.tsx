@@ -1,11 +1,12 @@
+import React from 'react'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Inicio", href: "#" },
+  { name: "Servicio", href: "#" },
+  { name: "Nosotros", href: "#" },
+  { name: "Proceso", href: "#" },
 ];
 
 type NavigationProps = {

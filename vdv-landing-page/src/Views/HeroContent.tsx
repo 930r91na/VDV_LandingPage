@@ -1,5 +1,5 @@
+import React from 'react'
 import BackgroundGradient from "../Utils/BackgroundGradient";
-import colors from "../Utils/Colors.module.css";
 import Button from "../Utils/ButtonProps";
 import { useTranslation } from 'react-i18next';
 
