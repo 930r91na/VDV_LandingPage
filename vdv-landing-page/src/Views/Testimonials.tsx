@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 interface TestimonialProps {
   description: string;
@@ -36,11 +37,10 @@ const demoTestimonials = [
 ];
 
 export default function EmblaCarouselTestimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
 
   useEffect(() => {
     if (emblaApi) {
-      // Access API
       console.log(emblaApi.slideNodes()); // Access API
     }
   }, [emblaApi]);
@@ -69,8 +69,6 @@ const Testimonials: React.FC<TestimonialProps> = (person) => {
   return (
     <>
       <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
-        <div className="" />
-        <div className="" />
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <img
             className="mx-auto h-12"

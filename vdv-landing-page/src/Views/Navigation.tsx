@@ -1,27 +1,55 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 
 const navigation = [
-  { name: "Inicio", href: "#" },
-  { name: "Servicio", href: "#" },
-  { name: "Nosotros", href: "#" },
-  { name: "Proceso", href: "#" },
+  { name: "Inicio", href: "#", action: null },
+  { name: "Servicio", href: "#", action: null },
+  { name: "Nosotros", href: "#", action: "scrollToOurTeam" },
+  { name: "Proceso", href: "#", action: "scrollToOurProcess" },
 ];
 
 type NavigationProps = {
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
+  positionRef: React.RefObject<HTMLElement>;
 };
 
 export default function Navigation({
   mobileMenuOpen,
   setMobileMenuOpen,
+  positionRef,
 }: NavigationProps) {
+  const handleNavigationClick = (action: string | null) => {
+    if (action === "scrollToOurTeam" && positionRef.current) {
+      positionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    // Close mobile menu if open
+    setMobileMenuOpen(false);
+  };
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50;
+      if (show !== isScrolled) setIsScrolled(show);
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolled]);
+
   return (
-    <header className="absolut inset-x-0 top-0 z-50">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 ${
+        isScrolled ? "bg-gradient-to-b from-blue-100 to-transparent" : "bg-gradient-to-b from-blue-100 to-transparent"
+      }`}
+    >
       <nav
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="flex items-center justify-between p-6 lg:px-8 "
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -50,6 +78,10 @@ export default function Navigation({
             <a
               key={item.name}
               href={item.href}
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default anchor action
+                handleNavigationClick(item.action);
+              }}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {item.name}
