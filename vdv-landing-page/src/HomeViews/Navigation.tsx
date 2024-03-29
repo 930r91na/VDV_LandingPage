@@ -1,30 +1,48 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 
 const navigation = [
-  { name: "Inicio", href: "#", action: null },
-  { name: "Servicio", href: "#", action: null },
-  { name: "Nosotros", href: "#", action: "scrollToOurTeam" },
-  { name: "Proceso", href: "#", action: "scrollToOurProcess" },
+  { name: "Inicio", href: "", action: "scrollToHome"},
+  { name: "Servicio", href: "/servicios", action: ""},
+  { name: "Nosotros", href: "", action: "scrollToOurTeam" },
+  { name: "Proceso", href: "/proceso", action: "" },
 ];
+
+
 
 type NavigationProps = {
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
-  positionRef: React.RefObject<HTMLElement>;
+  positionRef: {
+    homeRef: React.RefObject<HTMLElement>;
+    ourTeamRef: React.RefObject<HTMLElement>;
+    ourProcessRef: React.RefObject<HTMLElement>;
+    ourServicesRef: React.RefObject<HTMLElement>;
+  };
 };
 
+// TODO: Solve navigation for mobile format
 export default function Navigation({
   mobileMenuOpen,
   setMobileMenuOpen,
   positionRef,
 }: NavigationProps) {
   const handleNavigationClick = (action: string | null) => {
-    if (action === "scrollToOurTeam" && positionRef.current) {
-      positionRef.current.scrollIntoView({ behavior: "smooth" });
+    if (action === "scrollToHome" && positionRef.homeRef.current) {
+      positionRef.homeRef.current?.scrollIntoView({ behavior: "smooth" });
     }
-    // Close mobile menu if open
+    if (action === "scrollToOurTeam" && positionRef.ourTeamRef.current) {
+      positionRef.ourTeamRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (action === "scrollToOurProcess" && positionRef.ourProcessRef.current) {
+      positionRef.ourProcessRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (action === "scrollToOurServices" && positionRef.ourServicesRef.current) {
+      positionRef.ourServicesRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
     setMobileMenuOpen(false);
   };
 
@@ -45,7 +63,9 @@ export default function Navigation({
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 ${
-        isScrolled ? "bg-gradient-to-b from-blue-100 to-transparent" : "bg-gradient-to-b from-blue-100 to-transparent"
+        isScrolled
+          ? "bg-gradient-to-b from-blue-100 to-transparent"
+          : "bg-gradient-to-b from-blue-100 to-transparent"
       }`}
     >
       <nav
@@ -75,17 +95,19 @@ export default function Navigation({
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to = {item.href}
+              // href={item.href}
+              /*
               onClick={(e) => {
                 e.preventDefault(); // Prevent default anchor action
                 handleNavigationClick(item.action);
-              }}
+              }}*/
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

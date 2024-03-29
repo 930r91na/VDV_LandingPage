@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-blue-100 to-transparent text-black">
+    <footer className="bg-gradient-to-t from-blue-100 to-transparent text-sm font-semibold leading-6 text-gray-500">
         <div className="container mx-auto flex justify-between items-center py-5 px-10">
           {/* TODO: ADD Social Links */}
           <div className="flex items-center space-x-4">

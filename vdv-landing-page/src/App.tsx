@@ -1,12 +1,21 @@
 import React from "react";
-import Home from "./Views/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import Process from './Components/Process';
+import Services from './Components/Services';
+
 
 // App initialization
 const App: React.FC = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/proceso" element={<Process />} />
+        <Route path="/servicios" element={<Services />} />
+        {/* ...other routes */}
+      </Routes>
+    </Router>
   );
 };
 

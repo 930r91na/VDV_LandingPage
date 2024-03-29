@@ -22,10 +22,10 @@
     "typeRoots": [
       "./node_modules/@types",
       "./types",
-      
+
     ],
   },
   "include": [
     "src"
-, "src/Views/Home.tsx"  ]
+, "src/Components/Home.tsx"  ]
 }
