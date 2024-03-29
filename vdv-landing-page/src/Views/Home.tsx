@@ -3,6 +3,8 @@ import Navigation from "./Navigation";
 import HeroContent from "./HeroContent";
 import OurTeam from "./OurTeam";
 import EmblaCarouselTestimonials from "./Testimonials";
+import OurProcess from "./OurProcess";
+import Footer from "./Footer";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,6 +21,9 @@ export default function Home() {
       <HeroContent />
       <OurTeam ref = {posRef}/>
       <EmblaCarouselTestimonials />
+      <OurProcess ref = {posRef}/>
+      
+      <Footer/>
     </>
   );
 }
