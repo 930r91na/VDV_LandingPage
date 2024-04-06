@@ -2,9 +2,9 @@ import React from "react";
 import Instore from "../assets/delivery2.svg";
 import Delivery from "../assets/delivery.svg";
 
-const Services = React.forwardRef<HTMLElement>((props, ref) => {
+const Services = () => {
   return (
-    <section ref={ref} className="pt-20">
+    <section className="pt-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <h1>Servicios</h1>
@@ -48,5 +48,5 @@ const Services = React.forwardRef<HTMLElement>((props, ref) => {
       </div>
     </section>
   );
-});
+};
 export default Services;

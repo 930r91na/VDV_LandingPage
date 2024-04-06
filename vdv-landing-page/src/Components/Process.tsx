@@ -1,5 +1,7 @@
 import React from "react";
 import Thumbnail from "../Utils/Thumbnail";
+import Navigation from "../Layout/Navigation";
+import Footer from "../Layout/Footer";
 
 // Steps
 interface VideoProps {
@@ -33,9 +35,9 @@ const OurProcessSteps: VideoProps[] = [
   },
 ];
 
-const OurProcess = React.forwardRef<HTMLElement>((props, ref) => {
+const ProcessSteps = () => {
   return (
-    <section ref={ref} className="pt-20">
+    <section className="pt-20">
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-8 px-6 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Nuestro Proceso
@@ -46,5 +48,16 @@ const OurProcess = React.forwardRef<HTMLElement>((props, ref) => {
       </div>
     </section>
   );
+};
+
+const Process = React.forwardRef<HTMLElement>((props, ref) => {
+  return (
+    <>
+      
+      <ProcessSteps />
+      <Footer />
+    </>
+  );
 });
-export default OurProcess;
+
+export default Process;

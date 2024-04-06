@@ -4,10 +4,10 @@ import Button from "../Utils/ButtonProps";
 import { useTranslation } from "react-i18next";
 import React from "react";
 
-const HeroContent = React.forwardRef<HTMLElement>((props, ref) =>  {
+const HeroContent = () =>  {
   //const { t } = useTranslation();
   return (
-    <section ref = {ref} className="pt-10" >
+    <section className="pt-10" >
       <BackgroundGradient
         topBase="top-[calc(100%-13rem)]"
         topSm="sm:top-[calc(100%-30rem)]"
@@ -44,6 +44,6 @@ const HeroContent = React.forwardRef<HTMLElement>((props, ref) =>  {
       />
     </section>
   );
-});
+};
 
 export default HeroContent;

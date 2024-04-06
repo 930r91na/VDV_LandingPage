@@ -1,53 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Link} from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
+import { useNavigate } from "react-router-dom";
 
 const navigation = [
-  { name: "Inicio", href: "", action: "scrollToHome"},
-  { name: "Servicio", href: "/servicios", action: ""},
-  { name: "Nosotros", href: "", action: "scrollToOurTeam" },
-  { name: "Proceso", href: "/proceso", action: "" },
+  { name: "Inicio", href: ""},
+  { name: "Servicio", href: "/servicios"},
+  { name: "Nosotros", href: "/nosotros"},
+  { name: "Proceso", href: "/proceso"},
 ];
-
-
 
 type NavigationProps = {
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
-  positionRef: {
-    homeRef: React.RefObject<HTMLElement>;
-    ourTeamRef: React.RefObject<HTMLElement>;
-    ourProcessRef: React.RefObject<HTMLElement>;
-    ourServicesRef: React.RefObject<HTMLElement>;
-  };
+  OurTeamRef: React.RefObject<HTMLElement>;
 };
 
 // TODO: Solve navigation for mobile format
 export default function Navigation({
   mobileMenuOpen,
   setMobileMenuOpen,
-  positionRef,
 }: NavigationProps) {
-  const handleNavigationClick = (action: string | null) => {
-    if (action === "scrollToHome" && positionRef.homeRef.current) {
-      positionRef.homeRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-    if (action === "scrollToOurTeam" && positionRef.ourTeamRef.current) {
-      positionRef.ourTeamRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-    if (action === "scrollToOurProcess" && positionRef.ourProcessRef.current) {
-      positionRef.ourProcessRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-    if (action === "scrollToOurServices" && positionRef.ourServicesRef.current) {
-      positionRef.ourServicesRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-
-    setMobileMenuOpen(false);
-  };
-
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 50;
@@ -73,7 +49,7 @@ export default function Navigation({
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href={navigation[0].href} className="-m-1.5 p-1.5">
             <span className="sr-only">Valle del Volcan</span>
             <img
               className="h-8 w-auto"
@@ -97,13 +73,11 @@ export default function Navigation({
           {navigation.map((item) => (
             <Link
               key={item.name}
-              to = {item.href}
-              // href={item.href}
-              /*
+              to={item.href}
               onClick={(e) => {
                 e.preventDefault(); // Prevent default anchor action
-                handleNavigationClick(item.action);
-              }}*/
+                navigate(item.href);
+              }}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {item.name}
@@ -120,7 +94,7 @@ export default function Navigation({
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"

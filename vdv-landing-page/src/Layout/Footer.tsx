@@ -1,4 +1,3 @@
-import React from "react";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
@@ -11,6 +10,7 @@ const Footer = () => {
             <a
               href="https://www.instagram.com"
               target="_blank"
+              title = "Instagram Icon"
               rel="noopener noreferrer"
               className="hover:text-blue-200"
             >
@@ -19,6 +19,7 @@ const Footer = () => {
             <a
               href="https://www.facebook.com"
               target="_blank"
+              title = "Facebook Icon"
               rel="noopener noreferrer"
               className="hover:text-blue-200"
             >
