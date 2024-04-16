@@ -1,8 +1,5 @@
 import BackgroundGradient from "../Utils/BackgroundGradient";
-import colors from "../Utils/Colors.module.css";
 import Button from "../Utils/ButtonProps";
-import { useTranslation } from "react-i18next";
-import React from "react";
 
 const HeroContent = () =>  {
   //const { t } = useTranslation();
@@ -24,7 +21,7 @@ const HeroContent = () =>  {
             Valle del Volcan
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Purificadora de agua
+            Tu purificadora de agua 
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button text="Get started" variant="primary" />

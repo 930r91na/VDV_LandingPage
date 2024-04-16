@@ -2,14 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import VDV from "./App";
+import { MapProvider } from './providers/MapAPI'; 
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
+  <MapProvider>
   <React.StrictMode>
     <VDV />
   </React.StrictMode>
+  </MapProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

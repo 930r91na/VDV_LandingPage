@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-
+import Broadcast from "../assets/broadcast-svgrepo-com-blue.svg";
 interface TestimonialProps {
   description: string;
   name: string;
@@ -12,27 +12,27 @@ interface TestimonialProps {
 const demoTestimonials = [
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam nunc, sed sed. ",
-    name: "John Doe",
-    moreInfo: "CEO",
+      "Me Parece muy limpio el lugar y muy moderno el método para la recarga cuando vas en la noche. Perfecto para las emergencias nocturnas",
+    name: "C.P. Jiménez",
+    moreInfo: "Hace 3 años",
     imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "",
   },
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam nunc, sed sed. ",
-    name: "Jane Doe",
-    moreInfo: "CTO",
+      "Muy buen servicio. La nueva administración o dueño, es muy profesional y atento. ",
+    name: "Hortensia Ramirez",
+    moreInfo: "Hace 1 año",
     imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "",
   },
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam nunc, sed sed. ",
-    name: "John Smith",
-    moreInfo: "CFO",
+      "Calidad de agua excelente, 100% recomendado",
+    name: "Jul Jiménez",
+    moreInfo: "Hace 2 años",
     imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "",
   },
 ];
 
@@ -70,12 +70,7 @@ const Testimonials: React.FC<TestimonialProps> = (person) => {
     <>
       <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
-          <img
-            className="mx-auto h-12"
-            // TDOD: Replace this with vdv logo or some svg image
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
+          <img className="mx-auto h-40" src={Broadcast} alt="Testimonials" />
           <figure className="mt-10">
             <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>{person.description}</p>

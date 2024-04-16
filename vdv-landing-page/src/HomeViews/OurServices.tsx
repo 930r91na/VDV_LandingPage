@@ -13,7 +13,7 @@ const Services = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         {/* First service */}
         <div className="flex flex-col items-center max-w-full mx-auto my-2">
-          <img src={Delivery} alt="delivery image" className="w-60 h-60" />
+          <img src={Delivery} alt="Delivery" className="w-60 h-60" />
           <div className="text-center">
             <h2 className="pt-5 text-lg font-semibold text-slate-900">
               Servicio a domicilio
@@ -30,7 +30,7 @@ const Services = () => {
         </div>
         {/* Second service */}
         <div className="flex flex-col items-center max-w-full mx-auto my-2">
-          <img src={Instore} alt="instore image" className="w-60 h-60" />
+          <img src={Instore} alt="Instore" className="w-60 h-60" />
           <div className="text-center">
             <h2 className="pt-5 text-lg font-semibold text-slate-900">
               Compra en tienda

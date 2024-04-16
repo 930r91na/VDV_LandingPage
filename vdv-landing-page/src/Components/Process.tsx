@@ -53,9 +53,7 @@ const ProcessSteps = () => {
 const Process = React.forwardRef<HTMLElement>((props, ref) => {
   return (
     <>
-      
       <ProcessSteps />
-      <Footer />
     </>
   );
 });
