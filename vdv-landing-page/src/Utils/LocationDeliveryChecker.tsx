@@ -13,13 +13,13 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -34.397,
-  lng: 150.644,
-};
+    lat: 19.04530,
+    lng: -98.28759
+  };
 
 const deliveryZones = [
-  { lat: -34.397, lng: 150.644 },
-  { lat: -34.4, lng: 150.644 },
+    { lat: 19.04530, lng: -98.28759 },
+
   // Define delivery zones here
 ];
 
@@ -33,7 +33,7 @@ export function LocationDeliveryChecker() {
   const checkDeliveryService = (lat: number, lng: number) => {
     return deliveryZones.some(
       (zone) =>
-        Math.abs(zone.lat - lat) < 0.01 && Math.abs(zone.lng - lng) < 0.01 // Define delivery zone radius
+        Math.abs(zone.lat - lat) < 1 && Math.abs(zone.lng - lng) < 1 // Define delivery zone radius
     );
   };
 
@@ -50,40 +50,38 @@ export function LocationDeliveryChecker() {
       const loc = response.data.results[0].geometry.location;
       setLocation(loc);
       const isInDeliveryArea: boolean = checkDeliveryService(loc.lat, loc.lng);
-
       setMessage(
         isInDeliveryArea
-          ? "Your location is available for delivery!"
-          : "Oopsies! Your location is not available for delivery, but you can contact us to open a request."
+          ? "Tu ubicación esta disponible para entrega a domicilio!"
+          : "Oopsies! Tu ubicación no esta disponible para entrega a domicilio. Pero puedes solicitarnos en nuestra sucursal!"+loc.lat+" "+loc.lng
       );
     } catch (error) {
       setMessage(
-        "Failed to retrieve location. Please check the address and try again."
+        "Error al obtener la ubicación. Por favor, verifica que la dirección sea correcta."
       );
     }
   };
 
   return isLoaded ? (
     <div>
-    <form onSubmit={handleAddressSubmit}>
-      <input
-        type="text"
-        value={address}
-        onChange={(e) => setAddress(e.target.value)}
-        placeholder="Enter your address"
-      />
-      <button type="submit">Check Delivery Availability</button>
-    </form>
-    <p>{message}</p>
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={location}
-      zoom={10}
-    >
-      <Marker position={location} />
-    </GoogleMap>
-  </div>
+      <form onSubmit={handleAddressSubmit} className="flex flex-col space-y-4">
+        <input
+          className="border-2 border-gray-300 w-full p-2"
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          placeholder="Inserta tu dirección aquí"
+        />
+        <button
+          className="bg-sky-600 border-black text-white py-2"
+          type="submit"
+        >
+          Enviar
+        </button>
+      </form>
+      <p>{message}</p>
+    </div>
   ) : (
-    <></>
+    <div>Cargando...</div>
   );
 }
