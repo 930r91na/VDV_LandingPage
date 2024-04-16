@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
-  { name: "Inicio", href: ""},
-  { name: "Servicio", href: "/servicios"},
-  { name: "Nosotros", href: "/nosotros"},
-  { name: "Proceso", href: "/proceso"},
+  { name: "Inicio", href: "" },
+  { name: "Servicio", href: "/servicios" },
+  { name: "Nosotros", href: "/nosotros" },
+  { name: "Proceso", href: "/proceso" },
 ];
 
 type NavigationProps = {

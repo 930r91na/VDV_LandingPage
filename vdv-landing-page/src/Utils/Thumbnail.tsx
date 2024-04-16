@@ -35,14 +35,7 @@ const Thumbnail: React.FC<VideoProps> = ({
             className="block w-full h-full"
           >
             {!isModalOpen && (
-              
-                <ReactPlayer
-                  url={url}
-                  light={true}
-                  width="100%"
-                  height="100%"
-                />
-              
+              <ReactPlayer url={url} light={true} width="100%" height="100%" />
             )}
           </a>
         </div>

@@ -2,8 +2,8 @@ import { createContext, useContext } from "react";
 import { RefObject } from "react";
 
 type RefsContextType = {
-    ourTeamRef: RefObject<HTMLElement>;
-  };
+  ourTeamRef: RefObject<HTMLElement>;
+};
 
 const RefsContext = createContext<RefsContextType | undefined>(undefined);
 
@@ -14,5 +14,5 @@ export const useRefs = () => {
   }
   return context;
 };
-    
+
 export default RefsContext;

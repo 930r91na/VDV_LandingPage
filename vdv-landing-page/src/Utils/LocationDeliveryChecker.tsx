@@ -1,24 +1,14 @@
 import React, { useState } from "react";
-import {
-  GoogleMap,
-  LoadScript,
-  Marker,
-} from "@react-google-maps/api";
 import axios from "axios";
-import { useMapApi } from "../providers/MapAPI";
-
-const containerStyle = {
-  width: "100%",
-  height: "400px",
-};
+import { useMapApi } from "../providers/MapContext";
 
 const center = {
-    lat: 19.04530,
-    lng: -98.28759
-  };
+  lat: 19.0453,
+  lng: -98.28759,
+};
 
 const deliveryZones = [
-    { lat: 19.04530, lng: -98.28759 },
+  { lat: 19.0453, lng: -98.28759 },
 
   // Define delivery zones here
 ];
@@ -32,17 +22,16 @@ export function LocationDeliveryChecker() {
 
   const checkDeliveryService = (lat: number, lng: number) => {
     return deliveryZones.some(
-      (zone) =>
-        Math.abs(zone.lat - lat) < 1 && Math.abs(zone.lng - lng) < 1 // Define delivery zone radius
+      (zone) => Math.abs(zone.lat - lat) < 1 && Math.abs(zone.lng - lng) < 1, // Define delivery zone radius
     );
   };
 
   const handleAddressSubmit = async (
-    event: React.FormEvent<HTMLFormElement>
+    event: React.FormEvent<HTMLFormElement>,
   ) => {
     event.preventDefault();
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
-      address
+      address,
     )}&key=AIzaSyDjGnn29F9alL5gLx2urf_oY4FovxSJy38`;
 
     try {
@@ -53,11 +42,14 @@ export function LocationDeliveryChecker() {
       setMessage(
         isInDeliveryArea
           ? "Tu ubicación esta disponible para entrega a domicilio!"
-          : "Oopsies! Tu ubicación no esta disponible para entrega a domicilio. Pero puedes solicitarnos en nuestra sucursal!"+loc.lat+" "+loc.lng
+          : "Oopsies! Tu ubicación no esta disponible para entrega a domicilio. Pero puedes solicitarnos en nuestra sucursal!" +
+              loc.lat +
+              " " +
+              loc.lng,
       );
     } catch (error) {
       setMessage(
-        "Error al obtener la ubicación. Por favor, verifica que la dirección sea correcta."
+        "Error al obtener la ubicación. Por favor, verifica que la dirección sea correcta.",
       );
     }
   };

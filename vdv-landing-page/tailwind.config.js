@@ -1,12 +1,9 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, 
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: false,
   content: [],
   theme: {
     extend: {},
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
-}
-
+  plugins: [require("@tailwindcss/aspect-ratio")],
+};

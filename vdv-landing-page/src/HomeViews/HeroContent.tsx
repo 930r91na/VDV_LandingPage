@@ -1,10 +1,10 @@
 import BackgroundGradient from "../Utils/BackgroundGradient";
 import Button from "../Utils/ButtonProps";
 
-const HeroContent = () =>  {
+const HeroContent = () => {
   //const { t } = useTranslation();
   return (
-    <section className="pt-10" >
+    <section className="pt-10">
       <BackgroundGradient
         topBase="top-[calc(100%-13rem)]"
         topSm="sm:top-[calc(100%-30rem)]"
@@ -21,7 +21,7 @@ const HeroContent = () =>  {
             Valle del Volcan
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Tu purificadora de agua 
+            Tu purificadora de agua
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button text="Get started" variant="primary" />
