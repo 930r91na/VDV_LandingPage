@@ -1,7 +1,5 @@
 import React from "react";
 import Thumbnail from "../Utils/Thumbnail";
-import Navigation from "../Layout/Navigation";
-import Footer from "../Layout/Footer";
 
 // Steps
 interface VideoProps {

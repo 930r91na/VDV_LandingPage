@@ -1,7 +1,3 @@
-// Struct of products section
-import { Description } from "@headlessui/react/dist/components/description/description";
-import { describe } from "node:test";
-import React from "react";
 import ProductCard from "../Utils/ProductsCard";
 
 enum ProductType {

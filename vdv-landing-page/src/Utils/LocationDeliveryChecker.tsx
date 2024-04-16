@@ -17,7 +17,7 @@ export function LocationDeliveryChecker() {
   const { isLoaded } = useMapApi();
 
   const [address, setAddress] = useState("");
-  const [location, setLocation] = useState(center);
+  const [, setLocation] = useState(center);
   const [message, setMessage] = useState("");
 
   const checkDeliveryService = (lat: number, lng: number) => {

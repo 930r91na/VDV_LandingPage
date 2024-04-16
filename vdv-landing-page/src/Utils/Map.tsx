@@ -1,5 +1,5 @@
 import React from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap } from "@react-google-maps/api";
 import { useMapApi } from "../providers/MapContext";
 
 const containerStyle = {
@@ -15,7 +15,7 @@ const center = {
 export function Map() {
   const { isLoaded } = useMapApi();
 
-  const [map, setMap] = React.useState<google.maps.Map | null>(null);
+  const [, setMap] = React.useState<google.maps.Map | null>(null);
 
   const onLoad = React.useCallback(function callback(map: google.maps.Map) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
