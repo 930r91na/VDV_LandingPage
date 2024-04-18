@@ -1,13 +1,25 @@
 import { Map } from "../Utils/Map";
 import { LocationDeliveryChecker } from "../Utils/LocationDeliveryChecker";
-
+import BackgroundGradient from "../Utils/BackgroundGradient";
 const Services = () => {
   return (
-    <section className="pt-20">
+    <section className="pt-40">
+      <BackgroundGradient
+        topBase="top-[calc(100%-13rem)]"
+        topSm="sm:top-[calc(100%-30rem)]"
+        leftBase="left-[calc(50%+3rem)]"
+        leftSm="sm:left-[calc(50%+36rem)]"
+        rotation=""
+        colorFrom="#6de3e3"
+        colorTo="#473fb5"
+      />
+
+      
+
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-8 px-6 lg:px-8">
         <h1 className=" font-bold text-gray-900 sm: text-4xl ">
           {" "}
-          Servicios de llenado de agua LOL
+          Servicios de llenado de agua
         </h1>
         <div className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
           <h2> Compra en tienda</h2>

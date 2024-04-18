@@ -35,11 +35,16 @@ const OurProcessSteps: VideoProps[] = [
 
 const ProcessSteps = () => {
   return (
-    <section className="pt-20">
+    <section className="pt-40">
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-8 px-6 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Nuestro Proceso
         </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam nunc,
+          sed sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+          etiam nunc, sed sed. Lorem ipsum dolor sit amet, consectetur adipiscing. {""}
+        </p>
         {OurProcessSteps.map((step) => (
           <Thumbnail {...step} />
         ))}

@@ -1,10 +1,15 @@
 import BackgroundGradient from "../Utils/BackgroundGradient";
 import Button from "../Utils/ButtonProps";
-
+import HeroImage from "../assets/pexels-pixabay-40784.jpg";
+import AnnouncementBar from "../Utils/AnnouncementBar";
 const HeroContent = () => {
-  //const { t } = useTranslation();
   return (
-    <section className="pt-10">
+    <section className="relative pt-10">
+      {/* Background image container */}
+      <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
       <BackgroundGradient
         topBase="top-[calc(100%-13rem)]"
         topSm="sm:top-[calc(100%-30rem)]"
@@ -15,17 +20,17 @@ const HeroContent = () => {
         colorTo="#473fb5"
       />
 
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+      {/* Centered content */}
+      <div className="relative mx-auto max-w-7xl py-32 sm:py-48 lg:py-56 flex items-center justify-center">
+        <div className="text-center text-white p-4">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             Valle del Volcan
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8">
             Tu purificadora de agua
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button text="Get started" variant="primary" />
-            <Button text="Learn more" variant="secondary" />
+            {/* Buttons go here */}
           </div>
         </div>
       </div>

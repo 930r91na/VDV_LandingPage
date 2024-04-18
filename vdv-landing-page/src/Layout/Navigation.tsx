@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
-
+import Logo from "../assets/android-chrome-512x512.png";  
+import BackgroundGradient from "../Utils/BackgroundGradient";
 const navigation = [
   { name: "Inicio", href: "" },
   { name: "Servicio", href: "/servicios" },
@@ -41,9 +42,18 @@ export default function Navigation({
       className={`fixed top-0 left-0 w-full z-50 ${
         isScrolled
           ? "bg-gradient-to-b from-blue-100 to-transparent"
-          : "bg-gradient-to-b from-blue-100 to-transparent"
+          : "bg-white "
       }`}
     >
+        <BackgroundGradient
+        topBase="-top-40"
+        topSm="sm:-top-80"
+        leftBase="left-[calc(50%-11rem)]"
+        leftSm="sm:left-[calc(50%-30rem)]"
+        rotation="rotate-[30deg]"
+        colorFrom="#6de3e3"
+        colorTo="#473fb5"
+      />
       <nav
         className="flex items-center justify-between p-6 lg:px-8 "
         aria-label="Global"
@@ -52,9 +62,8 @@ export default function Navigation({
           <a href={navigation[0].href} className="-m-1.5 p-1.5">
             <span className="sr-only">Valle del Volcan</span>
             <img
-              className="h-8 w-auto"
-              // TODO: Replace this with vdv logo
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              className="h-14 w-16"
+              src={Logo}
               alt=""
             />
           </a>
@@ -98,8 +107,7 @@ export default function Navigation({
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                // TODO: Replace this with vdv logo
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src={Logo}
                 alt="Logo de Valle del Volcan"
               />
             </a>
