@@ -21,9 +21,8 @@ const OurProcess = () => {
 
             <div className="pt-8 flex flex-col justify-center">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                etiam nunc, sed sed. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Corporis nemo deserunt nam!
+
+                El agua del Valle del Volcán atraviesa un proceso de purificación de alta precisión en 12 etapas que incluye captación, filtración, suavización mediante electrólisis, esterilización con ozono y luz ultravioleta, asegurando así su pureza y calidad antes de llegar a tus manos.
               </p>
               <div className="pt-16 flex justify-center">
                 <Button text="Más información" variant="primary" onClick={onClick} />

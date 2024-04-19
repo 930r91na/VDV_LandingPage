@@ -38,7 +38,10 @@ const Services = () => {
                 </h2>
                 <p className="text-sm font-light">
                   Puedes visitarnos en nuestra ubicación para comprar garrafones. Estamos ubicados en:
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam omnis distinctio placeat ipsam laboriosam optio, quam reiciendis est, odio praesentium nostrum dolore, dignissimos doloribus inventore? Nemo dolorum nostrum cum labore!
+                  Cam. Real a San Andrés 1230
+                  Sin Nombre de Col 4
+                  72810 San Andrés Cholula, Pue.
+                  Mexico
                 </p>
               </div>
             </div>
@@ -57,12 +60,12 @@ const Services = () => {
             <div className="w-full sm:w-1/2">
               <h2 className="text-3xl font-bold mt-10">Servicio 24 horas</h2>
               <div className="pt-8 pr-8 flex flex-col justify-center">
-              <p className=" my-4">
-                Nuestro dispensador de agua 24 horas está disponible para ti en
-                cualquier momento del día. Mira el video a continuación para
-                aprender cómo usarlo. Por medio de este puedes llenar por tu
-                cuenta un garrafón de agua de 20 litors.
-              </p>
+                <p className=" my-4">
+                  Nuestro dispensador de agua 24 horas está disponible para ti en
+                  cualquier momento del día. Mira el video a continuación para
+                  aprender cómo usarlo. Por medio de este puedes llenar por tu
+                  cuenta un garrafón de agua de 20 litors.
+                </p>
               </div>
             </div>
             <div className="w-full sm:w-1/2">
