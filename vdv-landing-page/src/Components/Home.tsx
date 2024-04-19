@@ -11,11 +11,11 @@ enum ProductType {
   plastic,
 }
 
-const products = [
+/*const products = [
   {
     name: "Botella de 100 ml",
     description: "Botella con etiqueta personalizada",
-    image: "/assets/bottle.png",
+    image: "/../assets/botella.png",
     price: 10.0,
     type: ProductType.plastic,
   },
@@ -40,7 +40,7 @@ const products = [
     price: 15,
     type: ProductType.water,
   },
-];
+];*/
 
 export default function Home() {
   return (
@@ -54,7 +54,7 @@ export default function Home() {
 
       <FloatingWhatsApp
         //TODO: Replace this with correct information
-        phoneNumber="522212523657"
+        phoneNumber="2215304660"
         accountName="Valle del Volcan"
         avatar="../../public/VDV.png"
         chatMessage="¡Hola! ¿En qué podemos ayudarte?"
