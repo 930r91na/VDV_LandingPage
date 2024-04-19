@@ -1,8 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Instore from "../assets/delivery2.svg";
 import Delivery from "../assets/delivery.svg";
+import Button from "../Utils/ButtonProps";
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    navigate("/servicios");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="pt-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -19,13 +28,11 @@ const Services = () => {
               Servicio a domicilio
             </h2>
             <p className="text-sm my-2">Descripción breve del servicio...</p>{" "}
-            {/* If needed */}
-            <button
-              onClick={() => {}}
-              className="mt-4 bg-indigo-500/80 hover:bg-indigo-300 text-white font-bold py-2 px-4 rounded"
-            >
-              Más información
-            </button>
+            <Button
+              text="Más información"
+              variant="primary"
+              onClick={onClick}
+            />
           </div>
         </div>
         {/* Second service */}
@@ -36,13 +43,11 @@ const Services = () => {
               Compra en tienda
             </h2>
             <p className="text-sm my-2">Descripción breve del servicio...</p>{" "}
-            {/* If needed */}
-            <button
-              onClick={() => {}}
-              className="mt-4 bg-indigo-500/80 hover:bg-indigo-300 text-white font-bold py-2 px-4 rounded"
-            >
-              Más información
-            </button>
+            <Button
+              text="Más información"
+              variant="primary"
+              onClick={onClick}
+            />
           </div>
         </div>
       </div>

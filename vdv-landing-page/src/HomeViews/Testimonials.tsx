@@ -15,20 +15,20 @@ const demoTestimonials = [
       "Me Parece muy limpio el lugar y muy moderno el método para la recarga cuando vas en la noche. Perfecto para las emergencias nocturnas",
     name: "C.P. Jiménez",
     moreInfo: "Hace 3 años",
-    imageUrl: "",
+    imageUrl: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
     description:
       "Muy buen servicio. La nueva administración o dueño, es muy profesional y atento. ",
     name: "Hortensia Ramirez",
     moreInfo: "Hace 1 año",
-    imageUrl: "",
+    imageUrl: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
     description: "Calidad de agua excelente, 100% recomendado",
     name: "Jul Jiménez",
     moreInfo: "Hace 2 años",
-    imageUrl: "",
+    imageUrl: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
 ];
 

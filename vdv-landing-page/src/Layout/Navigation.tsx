@@ -4,7 +4,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/android-chrome-512x512.png";  
-import BackgroundGradient from "../Utils/BackgroundGradient";
 const navigation = [
   { name: "Inicio", href: "" },
   { name: "Servicio", href: "/servicios" },
@@ -42,18 +41,9 @@ export default function Navigation({
       className={`fixed top-0 left-0 w-full z-50 ${
         isScrolled
           ? "bg-gradient-to-b from-blue-100 to-transparent"
-          : "bg-white "
+          : "bg-white opacity-75 shadow-md"
       }`}
     >
-        <BackgroundGradient
-        topBase="-top-40"
-        topSm="sm:-top-80"
-        leftBase="left-[calc(50%-11rem)]"
-        leftSm="sm:left-[calc(50%-30rem)]"
-        rotation="rotate-[30deg]"
-        colorFrom="#6de3e3"
-        colorTo="#473fb5"
-      />
       <nav
         className="flex items-center justify-between p-6 lg:px-8 "
         aria-label="Global"
@@ -103,14 +93,14 @@ export default function Navigation({
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <button className="-m-1.5 p-1.5">
+              <span className="sr-only">Valle del Volcan</span>
               <img
                 className="h-8 w-auto"
                 src={Logo}
                 alt="Logo de Valle del Volcan"
               />
-            </a>
+            </button>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
