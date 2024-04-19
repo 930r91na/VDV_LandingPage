@@ -24,7 +24,7 @@ const HeroContent = () => {
       <div className="relative mx-auto max-w-7xl py-32 sm:py-48 lg:py-56 flex items-center justify-center">
         <div className="text-center text-white p-4">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-            Valle del Volcán
+            Valle del Volcn
           </h1>
           <p className="mt-6 text-lg leading-8">
             Tu purificadora de agua

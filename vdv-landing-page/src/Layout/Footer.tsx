@@ -29,13 +29,13 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="text-sm">
-          <PhoneIcon className="inline h-6 w-6 mr-2" /> Contact Us: 221 530 4660
+          <PhoneIcon className="inline h-6 w-6 mr-2" /> Contáctanos: 221 530 4660
         </div>
 
         {/* Additional Information */}
         <div>
           <p className="text-sm">
-            © 2024 Valle del Volcan. All rights reserved.
+            © 2024 Valle del Volcan. Todos los derechos reservados.
           </p>
         </div>
       </div>
