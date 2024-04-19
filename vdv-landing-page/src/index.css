@@ -1,35 +1,3 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-.embla_c {
-    overflow: hidden;
-  }
-  .embla__container_c {
-    display: flex;
-  }
-  .embla__slide_c {
-    flex: 0 0 20%;
-    min-width: 0;
-    border: 15px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    column-gap: 20px;
-    row-gap: 20px;
-    border: 15px #242424;
-  }
-  
-  .content {
-    color: #242424;
-    width: 180px;
-    font-weight: 600;
-    text-align: center;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 10px;
-  }
