@@ -27,7 +27,7 @@ const Services = () => {
             <h2 className="pt-5 text-lg font-semibold text-slate-900">
               Servicio a domicilio
             </h2>
-            <p className="text-sm my-2">Descripción breve del servicio...</p>{" "}
+            <p className="text-sm my-2">¡Llevamos la frescura de nuestra agua purificada hasta tu hogar!</p>{" "}
             <Button
               text="Más información"
               variant="primary"
@@ -42,7 +42,7 @@ const Services = () => {
             <h2 className="pt-5 text-lg font-semibold text-slate-900">
               Compra en tienda
             </h2>
-            <p className="text-sm my-2">Descripción breve del servicio...</p>{" "}
+            <p className="text-sm my-2">¡Visítanos y adquiere tu agua!</p>{" "}
             <Button
               text="Más información"
               variant="primary"
