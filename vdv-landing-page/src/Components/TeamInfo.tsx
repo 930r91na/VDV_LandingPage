@@ -14,9 +14,8 @@ const TeamInfo = () => {
 
             En Agua Valle del Volcán, nuestra misión trasciende la simple distribución de agua; buscamos ser guardianes de la pureza y custodios de la salud de nuestras familias. Con orígenes profundamente enraizados en la majestuosidad del entorno natural, cada miembro de nuestro equipo es un ferviente creyente en el valor de un recurso tan vital como el agua. Nos enorgullecemos de utilizar métodos de purificación vanguardistas y sostenibles para entregar un producto que no solo refresca, sino que también nutre y protege.
 
-            Desde nuestros humildes comienzos, hemos crecido con la comunidad que nos rodea, aprendiendo y adaptándonos a las necesidades cambiantes de un mundo dinámico. <br></br> En nuestra purificadora, valoramos el conocimiento tradicional tanto como la innovación tecnológica, y es esta combinación la que nos permite ofrecer agua de la más alta calidad. Cada botella es un testimonio de nuestro compromiso inquebrantable con la excelencia, la responsabilidad ambiental y el servicio al cliente.
+            Desde nuestros humildes comienzos, hemos crecido con la comunidad que nos rodea, aprendiendo y adaptándonos a las necesidades cambiantes de un mundo dinámico. 
 
-            Nos inspiramos en la belleza y la fuerza del volcán que da nombre a nuestro valle, un recordatorio constante de la potencia y la pureza que buscamos reflejar en cada paso de nuestro proceso. Al elegirnos, no solo eliges agua purificada; eliges ser parte de una comunidad consciente, una que valora la salud, la sostenibilidad y el legado de un planeta limpio para las generaciones venideras.
           </p>
         </div>
 

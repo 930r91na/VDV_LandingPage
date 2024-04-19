@@ -38,10 +38,12 @@ const Services = () => {
                 </h2>
                 <p className="text-sm font-light">
                   Puedes visitarnos en nuestra ubicación para comprar garrafones. Estamos ubicados en:
-                  Cam. Real a San Andrés 1230
-                  Sin Nombre de Col 4
-                  72810 San Andrés Cholula, Pue.
-                  Mexico
+                  <address className="not-italic">
+                    <div>Cam. Real a San Andrés 1230</div>
+                    <div>Sin Nombre de Col 4</div>
+                    <div>72810 San Andrés Cholula, Pue.</div>
+                    <div>Mexico</div>
+                  </address>
                 </p>
               </div>
             </div>
