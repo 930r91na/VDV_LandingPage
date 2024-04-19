@@ -1,4 +1,8 @@
 import ProductCard from "../Utils/ProductsCard";
+import botella from "../assets/b1.jpg";
+import garrafon from "../assets/garrafon.png";
+import botella2 from "../assets/b2.jpg";
+import garrafon2 from "../assets/garrafon2.png";
 
 enum ProductType {
   water,
@@ -9,28 +13,28 @@ const products = [
   {
     name: "Botella de 100 ml",
     description: "Botella con etiqueta personalizada",
-    image: "../assets/bottle.png",
+    image: botella,
     price: 10.0,
     type: ProductType.plastic,
   },
   {
     name: "Botella de  500 ml",
     description: "Botella con etiqueta personalizada",
-    image: "/../assets/bottle.png",
+    image: botella2,
     price: 15.0,
     type: ProductType.plastic,
   },
   {
     name: "Garrafon de  20 lts",
     description: "Compra de garrafon de agua purificada",
-    image: "/../assets/garrafon.png",
+    image: garrafon,
     price: 50.0,
     type: ProductType.plastic,
   },
   {
     name: "Garrafon de  20 lts",
     description: "Llenado de garrafon de agua purificada",
-    image: "/../assets/garrafon.png",
+    image: garrafon2,
     price: 15,
     type: ProductType.water,
   },
