@@ -1,4 +1,3 @@
-import PersonGrid from "../Utils/Grid";
 import React from "react";
 
 const OurTeam = () => {
@@ -14,7 +13,7 @@ const OurTeam = () => {
             elementum enim vitae ullamcorper suspendisse.
           </p>
         </div>
-        <PersonGrid />
+        
       </div>
     </section>
   );
