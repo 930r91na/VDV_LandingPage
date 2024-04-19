@@ -23,7 +23,8 @@ const Button: React.FC<ButtonProps> = ({ text, variant, onClick }) => {
       secondary: {
         color: colors.nightBlueShade,
         ':hover': {
-          backgroundColor: colors.paleBlueSky
+          backgroundColor: colors.nightBlueShade,
+          colors: colors.vibrantOcean
         },
         ':focus-visible': {
           outlineColor: colors.darkBlueDeep

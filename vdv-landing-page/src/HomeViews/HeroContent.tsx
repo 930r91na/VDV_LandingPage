@@ -7,7 +7,6 @@ const HeroContent = () => {
     <section className="relative pt-10">
       {/* Background image container */}
       <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
       <BackgroundGradient

@@ -3,7 +3,7 @@ import botella from "../assets/b1.jpg";
 import garrafon from "../assets/garrafon.png";
 import botella2 from "../assets/b2.jpg";
 import garrafon2 from "../assets/garrafon2.png";
-
+import ProductsCarousel from "../Utils/ProductsCarousel";
 enum ProductType {
   water,
   plastic,
@@ -49,6 +49,7 @@ const OurProducts = () => {
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
         <div>
           {products.map((product) => (
             <ProductCard

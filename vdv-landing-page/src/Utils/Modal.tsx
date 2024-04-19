@@ -38,7 +38,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, children }) => {
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-0 right-0 mt-4 mr-4 text-white" // Adjusted for top right, added margin for spacing
+          className="p-4 absolute top-0 right-0 mt-4 mr-4 text-white hover:text-blue-700" 
           aria-label="Close modal"
         >
           <CloseIcon />
