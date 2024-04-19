@@ -1,9 +1,19 @@
 import { Map } from "../Utils/Map";
 import { LocationDeliveryChecker } from "../Utils/LocationDeliveryChecker";
 import BackgroundGradient from "../Utils/BackgroundGradient";
+import { useNavigate } from "react-router-dom";
+import VideoCard from "../Utils/VideoCard";
+
 const Services = () => {
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    navigate("/video"); // Update with the correct route
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <section className="pt-40">
+    <section className="pt-40 bg-white">
       <BackgroundGradient
         topBase="top-[calc(100%-13rem)]"
         topSm="sm:top-[calc(100%-30rem)]"
@@ -14,44 +24,56 @@ const Services = () => {
         colorTo="#473fb5"
       />
 
-      
-
-      <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-8 px-6 lg:px-8">
-        <h1 className=" font-bold text-gray-900 sm: text-4xl ">
-          {" "}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h1 className="text-4xl font-bold text-gray-900">
           Servicios de llenado de agua
         </h1>
-        <div className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-          <h2> Compra en tienda</h2>
-          <div className="max-w-full mx-auto my-2 shadow-lg">
-            <div className="flex items-center bg-white">
-              <div className="flex-1">
-                <Map />
-              </div>
-              <div className="flex-1 p-10">
-                <h2 className="text-xxl font-bold">
-                  Purificadora Valle del Volcán{" "}
+        <section className="mt-8 grid grid-cols-1 gap-8">
+          <div className="shadow-lg rounded-lg overflow-hidden">
+            <div className="grid grid-cols-2">
+              <Map />
+              <div className="p-10">
+                <h2 className="text-2xl font-bold">
+                  Compra en tienda
                 </h2>
-                <p className="text-sm leading-relaxed font-normal">
-                  Cam. Real a San Andrés 1230, Sin Nombre de Col 4, 72810 San
-                  Andrés Cholula, Pue.e
-                </p>
-                <p className="text-sm leading-relaxed font-normal">
-                  +52 221 530 4660
+                <p className="text-sm font-light">
+                  Puedes visitarnos en nuestra ubicación para comprar garrafones. Estamos ubicados en:
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam omnis distinctio placeat ipsam laboriosam optio, quam reiciendis est, odio praesentium nostrum dolore, dignissimos doloribus inventore? Nemo dolorum nostrum cum labore!
                 </p>
               </div>
             </div>
           </div>
 
-          <h2 className="pt-10">A domicilio</h2>
+          <h2 className="text-3xl font-bold">A domicilio</h2>
+          <p className="my-4">
+            Inserta tu ubicación para verificar si ofrecemos servicio a
+            domicilio en tu área. Si no es así, puedes visitarnos en nuestra
+            ubicación o llamar para tratar la posibilidad de un servicio
+            especial.
+          </p>
           <LocationDeliveryChecker />
 
-          <h2 className="pt-10">Servicio 24 horas</h2>
-        </div>
-        <h1 className=" font-bold text-gray-900 sm: text-4xl ">
-          {" "}
-          Servicios de embotellado de agua{" "}
-        </h1>
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full sm:w-1/2">
+              <h2 className="text-3xl font-bold mt-10">Servicio 24 horas</h2>
+              <div className="pt-8 pr-8 flex flex-col justify-center">
+              <p className=" my-4">
+                Nuestro dispensador de agua 24 horas está disponible para ti en
+                cualquier momento del día. Mira el video a continuación para
+                aprender cómo usarlo. Por medio de este puedes llenar por tu
+                cuenta un garrafón de agua de 20 litors.
+              </p>
+              </div>
+            </div>
+            <div className="w-full sm:w-1/2">
+              <VideoCard
+                url="https://www.youtube.com/watch?v=IVfE_OQ7a1k&pp=ygUpZGVzcGFjaGFkb3IgZGUgYWd1YSBwdXJpZmljYWRhIGRlIG1vbmVkYXM%3D"
+                description="Video tutorial de cómo usar el dispensador de agua 24 horas"
+                title="Tutorial de uso dispensador de agua 24 horas"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );
