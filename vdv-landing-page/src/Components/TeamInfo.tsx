@@ -11,9 +11,12 @@ const TeamInfo = () => {
             Nosotros
           </h1>
           <p className="pb-4 pt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam
-            nunc, sed sed. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit.
+
+            En Agua Valle del Volcán, nuestra misión trasciende la simple distribución de agua; buscamos ser guardianes de la pureza y custodios de la salud de nuestras familias. Con orígenes profundamente enraizados en la majestuosidad del entorno natural, cada miembro de nuestro equipo es un ferviente creyente en el valor de un recurso tan vital como el agua. Nos enorgullecemos de utilizar métodos de purificación vanguardistas y sostenibles para entregar un producto que no solo refresca, sino que también nutre y protege.
+
+            Desde nuestros humildes comienzos, hemos crecido con la comunidad que nos rodea, aprendiendo y adaptándonos a las necesidades cambiantes de un mundo dinámico. <br></br> En nuestra purificadora, valoramos el conocimiento tradicional tanto como la innovación tecnológica, y es esta combinación la que nos permite ofrecer agua de la más alta calidad. Cada botella es un testimonio de nuestro compromiso inquebrantable con la excelencia, la responsabilidad ambiental y el servicio al cliente.
+
+            Nos inspiramos en la belleza y la fuerza del volcán que da nombre a nuestro valle, un recordatorio constante de la potencia y la pureza que buscamos reflejar en cada paso de nuestro proceso. Al elegirnos, no solo eliges agua purificada; eliges ser parte de una comunidad consciente, una que valora la salud, la sostenibilidad y el legado de un planeta limpio para las generaciones venideras.
           </p>
         </div>
 
@@ -22,9 +25,7 @@ const TeamInfo = () => {
             Nuestro Equipo
           </h1>
           <p className="pb-4 pt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam
-            nunc, sed sed. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit.
+          Nuestro equipo de Agua Valle del Volcán, desde dedicados repartidores hasta meticulosos empleados, son el corazón de nuestra operación, trabajando unidos para garantizar que cada botella entregada sea sinónimo de calidad y servicio excepcional. Con una ética laboral insuperable y una sonrisa amable, hacen posible que la pureza de la naturaleza llegue directamente a tu puerta.
           </p>
 
           <PersonGrid />
@@ -32,12 +33,10 @@ const TeamInfo = () => {
         <div className="grid grid-cols-2 gap-4 pb-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Mision
+              Misión
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam
-              nunc, sed sed. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Corporis nemo deserunt nam!
+            Proveer a nuestros clientes agua de la más alta pureza y calidad, nutriendo la salud y bienestar de nuestra comunidad con responsabilidad, sostenibilidad e innovación constante.
             </p>
           </div>
           <div>
@@ -45,9 +44,7 @@ const TeamInfo = () => {
               Vision
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In etiam
-              nunc, sed sed. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Corporis nemo deserunt nam!
+            Ser la purificadora de agua líder en Cholula, inspirando un futuro donde cada persona tiene acceso a agua limpia y segura, estableciendo nuevos estándares en sostenibilidad y cuidado del medio ambiente.
             </p>
           </div>
         </div>

@@ -16,13 +16,13 @@ const people = [
   },
   {
     name: "Dries Vincent",
-    role: "Repartidor dos",
+    role: "Repartidor 1",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
     name: "Lindsay Walton",
-    role: "Repartidor uno",
+    role: "Repartidor 2",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
