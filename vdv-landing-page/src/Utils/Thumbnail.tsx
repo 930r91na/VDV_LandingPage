@@ -25,8 +25,7 @@ const Thumbnail: React.FC<VideoProps> = ({
   return (
     <div className="p-15 flex items-center bg-white shadow-lg p-4 rounded-lg max-w-full mx-auto my-2">
       <div className="text-4xl font-bold pr-4">{index}</div>
-      <div className="flex-grow">
-        {/*TODO: make the thumbnail reponsive*/}
+      <div className="">
         <div className="w-96 h-56 bg-gray-200 rounded-lg overflow-hidden">
           {/* Clickable area to play the video, showing only the thumbnail initially */}
           <a
@@ -40,9 +39,9 @@ const Thumbnail: React.FC<VideoProps> = ({
           </a>
         </div>
       </div>
-      <div className=" p-3 pt-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm text-gray-600">{description}</p>
+      <div className="p-3 pt-2">
+        <h3 className="text-left text-xl font-semibold ">{title}</h3>
+        <p className="text-sm text-gray-600 ">{description}</p>
       </div>
 
       {isModalOpen && (
