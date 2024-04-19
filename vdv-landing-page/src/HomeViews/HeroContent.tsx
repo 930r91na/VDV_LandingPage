@@ -1,7 +1,7 @@
 import BackgroundGradient from "../Utils/BackgroundGradient";
-import Button from "../Utils/ButtonProps";
 import HeroImage from "../assets/pexels-pixabay-40784.jpg";
-import AnnouncementBar from "../Utils/AnnouncementBar";
+import color from "../assets/ColorPalette";
+
 const HeroContent = () => {
   return (
     <section className="relative pt-10">
@@ -13,11 +13,11 @@ const HeroContent = () => {
       <BackgroundGradient
         topBase="top-[calc(100%-13rem)]"
         topSm="sm:top-[calc(100%-30rem)]"
-        leftBase="left-[calc(50%+3rem)]"
-        leftSm="sm:left-[calc(50%+36rem)]"
+        leftBase="left-[calc(25%+3rem)]"
+        leftSm="sm:left-[calc(25%+36rem)]"
         rotation=""
-        colorFrom="#6de3e3"
-        colorTo="#473fb5"
+        colorFrom={color.darkBlueDeep}
+        colorTo={color.nightBlueShade}
       />
 
       {/* Centered content */}
@@ -41,8 +41,8 @@ const HeroContent = () => {
         leftBase="left-[calc(50%-11rem)]"
         leftSm="sm:left-[calc(50%-30rem)]"
         rotation="rotate-[30deg]"
-        colorFrom="#6de3e3"
-        colorTo="#473fb5"
+        colorFrom={color.darkBlueDeep}
+        colorTo={color.nightBlueShade}
       />
     </section>
   );

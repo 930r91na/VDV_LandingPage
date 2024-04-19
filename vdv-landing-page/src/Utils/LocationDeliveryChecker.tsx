@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useMapApi } from "../providers/MapContext";
+import color from "../assets/ColorPalette";
 
 const center = {
   lat: 19.0453,
@@ -65,7 +66,8 @@ export function LocationDeliveryChecker() {
           placeholder="Inserta tu dirección aquí"
         />
         <button
-          className="bg-sky-600 border-black text-white py-2"
+          style={{ backgroundColor: color.nightBlueShade }}
+          className=" border-black text-white py-2"
           type="submit"
         >
           Enviar
