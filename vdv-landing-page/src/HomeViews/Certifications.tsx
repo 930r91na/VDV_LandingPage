@@ -11,7 +11,6 @@ const certifications = [
   { src: Certificate, date: "Agosto 1, 2023" },
 ];
 
-
 const OurProcess = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -26,10 +25,16 @@ const OurProcess = () => {
   return (
     <section className="pt-20 flex justify-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-900">Calidad del Agua Certificada por</h1>
+        <h1 className="text-4xl font-bold text-gray-900">
+          Calidad del Agua Certificada por
+        </h1>
         <div className="pt-8 flex flex-col items-center">
           <img src={LogoCertificadora} alt="Trataquim Logo" />
-          <Button text="Visualizar certificado" variant="secondary" onClick={onClick} />
+          <Button
+            text="Visualizar certificado"
+            variant="secondary"
+            onClick={onClick}
+          />
         </div>
       </div>
 
@@ -37,9 +42,16 @@ const OurProcess = () => {
         <Modal onClose={closeModal}>
           <Carousel showThumbs={false}>
             {certifications.map((cert, index) => (
-              <div key={index} className="flex flex-col items-center justify-center p-4">
-                <img src={cert.src} alt={`Certification ${index + 1}`} className="object-contain h-full max-h-96" />
-                <p className="text-center">{`Fecha de certificación: ${cert.date}`}</p>
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center p-4"
+              >
+                <h3 className="text-center">{`Fecha de certificación: ${cert.date}`}</h3>
+                <img
+                  src={cert.src}
+                  alt={`Certification ${index + 1}`}
+                  className="object-contain h-1/2"
+                />
               </div>
             ))}
           </Carousel>

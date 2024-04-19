@@ -31,7 +31,8 @@ const Modal: React.FC<ModalProps> = ({ onClose, children }) => {
       onClick={onClose}
     >
       <div
-        className="relative w-1/2 h-1/2 bg-white p-4 rounded-lg shadow-xl"
+        className="relative w-1/2 h-1/2 bg-white p-4 rounded-lg shadow-xl overflow-auto resize"
+        style={{ minWidth: '300px', minHeight: '600px' }}
         onClick={(e) => e.stopPropagation()}
       >
         {children}
