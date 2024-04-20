@@ -29,3 +29,26 @@
     padding-bottom: 2rem;
     padding-right: 2rem;
   }
+
+  .product-container {
+    flex: 0 0 calc(25% - 1rem);
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.product-container:hover {
+    box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.08);
+}
+
+.centrar-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Para centrar el texto horizontalmente */
+    height: 100%; /* Asegura que el contenido ocupe toda la altura del contenedor */
+}
