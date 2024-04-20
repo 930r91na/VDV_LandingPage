@@ -14,8 +14,11 @@ const HeroContent = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div
+          className="absolute inset-0 bg-black bg-opacity-50"
+        />
       </div>
+
       <BackgroundGradient
         topBase="top-[calc(100%-13rem)]"
         topSm="sm:top-[calc(100%-30rem)]"

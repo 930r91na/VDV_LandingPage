@@ -39,8 +39,8 @@ export default function Navigation({
     <header
       className={`fixed top-0 left-0 w-full z-50 ${
         isScrolled
-          ? "bg-gradient-to-b from-blue-100 to-transparent"
-          : "bg-white opacity-75 shadow-md"
+          ? "bg-gradient-to-b from-blue-100 to-white opacity-75 shadow-md"
+          : "bg-gradient-to-b from-blue-100 to-white opacity-75 shadow-md"
       }`}
     >
       <nav
