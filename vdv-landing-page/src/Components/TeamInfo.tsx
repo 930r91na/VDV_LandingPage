@@ -46,9 +46,7 @@ const TeamInfo = () => {
               Misión
             </h1>
             <p>
-              Proveer a nuestros clientes agua de la más alta pureza y calidad,
-              nutriendo la salud y bienestar de nuestra comunidad con
-              responsabilidad, sostenibilidad e innovación constante.
+            Proporcionar agua purificada de calidad óptima, caracterizada por su equilibrio perfecto de sales para la hidratación humana y la preparación de alimentos. Ofrecer un servicio puntual y oportuno.
             </p>
           </div>
           <div>
@@ -56,10 +54,7 @@ const TeamInfo = () => {
               Vision
             </h1>
             <p>
-              Ser la purificadora de agua líder en Cholula, inspirando un futuro
-              donde cada persona tiene acceso a agua limpia y segura,
-              estableciendo nuevos estándares en sostenibilidad y cuidado del
-              medio ambiente.
+            Convertirnos en el principal referente de calidad, servicio e hidratación en Puebla, siendo reconocidos por nuestra agua purificada de alta calidad y nuestro compromiso constante con la satisfacción del cliente. Buscamos expandir nuestras operaciones a través de alianzas estratégicas con restaurantes, fraccionamientos y domicilios particulares que impulsen el crecimiento conjunto y la excelencia en el servicio.
             </p>
           </div>
         </div>
