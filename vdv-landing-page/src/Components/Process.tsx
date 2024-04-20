@@ -137,7 +137,7 @@ const ProcessSteps = () => {
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Nuestro Proceso
         </h1>
-        <p className="div_2">
+        <p >
           Nuestro proceso de purificación en Agua Valle del Volcán es un
           compromiso con la excelencia. Cada etapa es supervisada para asegurar
           que el agua que llega a ti es de la mejor calidad.{" "}

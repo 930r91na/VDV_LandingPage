@@ -14,19 +14,10 @@ const Services = () => {
   };
 
   return (
-    <section className="pt-40 bg-white">
-      <BackgroundGradient
-        topBase="top-[calc(100%-13rem)]"
-        topSm="sm:top-[calc(100%-30rem)]"
-        leftBase="left-[calc(50%+3rem)]"
-        leftSm="sm:left-[calc(50%+36rem)]"
-        rotation=""
-        colorFrom="#6de3e3"
-        colorTo="#473fb5"
-      />
+    <section className="pt-32 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-8">
-          Servicios de llenado de agua
+        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-8">
+          Servicios
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>

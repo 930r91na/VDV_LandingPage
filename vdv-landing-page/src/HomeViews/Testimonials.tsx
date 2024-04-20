@@ -64,7 +64,7 @@ export default function EmblaCarouselTestimonials() {
 const Testimonials: React.FC<TestimonialProps> = (person) => {
   return (
     <>
-      <section className="p-8 relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:px-8">
+      <section className="p-8 relative isolate overflow-hidden px-6 py-8 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <img className="mx-auto h-40" src={Broadcast} alt="Testimonials" />
           <figure className="mt-10">

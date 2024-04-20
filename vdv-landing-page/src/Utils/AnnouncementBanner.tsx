@@ -11,13 +11,13 @@ type AnnouncementBannerProps = {
 
 const AnnouncementBanner = ({
   message,
-  backgroundColor = "bg-blue-100",
+  backgroundColor = "bg-gradient-to-r from-blue-100 to-transparent",
   textColor = "text-blue-800",
   hoverColor = "hover:bg-blue-500",
   onDismiss,
 }: AnnouncementBannerProps) => {
   return (
-    <div className={`${backgroundColor}`}>
+    <div className="bg-gradient-to-b from-blue-100 to-transparent shadow-sm ">
       <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between flex-wrap">
           <div className={`w-0 flex-1 flex items-center ${textColor}`}>
@@ -32,7 +32,7 @@ const AnnouncementBanner = ({
               {message}
             </p>
           </div>
-          <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3 text-white">
+          <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3 text-blue-400">
             <button
               type="button"
               className={`-mr-1 flex p-2 rounded-md  focus:outline-none sm:-mr-2`}
