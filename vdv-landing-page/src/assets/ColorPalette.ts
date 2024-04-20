@@ -1,5 +1,6 @@
 const colors = {
     'lightBlueSky': '#a8d2f1',
+    'pblue':'#EBF8FF',
     'vibrantOcean': '#6ccdea',
     'sunnyOrange': '#ffa840',
     'deepSeaBlue': '#0197d1',

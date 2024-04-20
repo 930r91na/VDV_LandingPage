@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Instore from "../assets/delivery2.svg";
-import Delivery from "../assets/delivery.svg";
+import Instore from "../assets/transportation-svgrepo-com.svg";
+import Delivery from "../assets/location-svgrepo-com.svg";
 import Button from "../Utils/ButtonProps";
 
 const Services = () => {

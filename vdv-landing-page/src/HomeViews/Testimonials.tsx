@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Broadcast from "../assets/broadcast-svgrepo-com-blue.svg";
+import Broadcast from "../assets/broadcast-svgrepo-com (3).svg";
 interface TestimonialProps {
   description: string;
   name: string;
