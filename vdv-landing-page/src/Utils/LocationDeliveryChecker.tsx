@@ -20,19 +20,20 @@ export function LocationDeliveryChecker() {
   const [address, setAddress] = useState("");
   const [, setLocation] = useState(center);
   const [message, setMessage] = useState("");
+  const [isInDeliveryArea, setIsInDeliveryArea] = useState(false); 
 
   const checkDeliveryService = (lat: number, lng: number) => {
     return deliveryZones.some(
-      (zone) => Math.abs(zone.lat - lat) < 1 && Math.abs(zone.lng - lng) < 1, // Define delivery zone radius
+      (zone) => Math.abs(zone.lat - lat) < 1 && Math.abs(zone.lng - lng) < 1 // Define delivery zone radius
     );
   };
 
   const handleAddressSubmit = async (
-    event: React.FormEvent<HTMLFormElement>,
+    event: React.FormEvent<HTMLFormElement>
   ) => {
     event.preventDefault();
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
-      address,
+      address
     )}&key=AIzaSyDjGnn29F9alL5gLx2urf_oY4FovxSJy38`;
 
     try {
@@ -40,17 +41,15 @@ export function LocationDeliveryChecker() {
       const loc = response.data.results[0].geometry.location;
       setLocation(loc);
       const isInDeliveryArea: boolean = checkDeliveryService(loc.lat, loc.lng);
+      setIsInDeliveryArea(isInDeliveryArea);
       setMessage(
         isInDeliveryArea
-          ? "Tu ubicación esta disponible para entrega a domicilio!"
-          : "Oopsies! Tu ubicación no esta disponible para entrega a domicilio. Pero puedes solicitarnos en nuestra sucursal!" +
-              loc.lat +
-              " " +
-              loc.lng,
+          ? 'Tu ubicación está disponible para entrega a domicilio! Puedes <a href="https://wa.me/12215304660?text=Me%20gustaría%20programar%20una%20entrega." class="underline text-blue-600 hover:text-blue-800">¡Agenda tu pedido ahora!</a>'
+          : `Oops! Tu ubicación no está disponible para entrega. Llámanos al <a href="tel:+12215304660" class="underline text-blue-600 hover:text-blue-800">221 530 4660</a> para opciones.`
       );
     } catch (error) {
       setMessage(
-        "Error al obtener la ubicación. Por favor, verifica que la dirección sea correcta.",
+        "Error al obtener la ubicación. Por favor, verifica que la dirección sea correcta."
       );
     }
   };
@@ -73,7 +72,13 @@ export function LocationDeliveryChecker() {
           Enviar
         </button>
       </form>
-      <p>{message}</p>
+      <div
+        className={`mt-4 text-sm ${
+          isInDeliveryArea ? "text-green-500" : "text-red-500"
+        } animate-pulse`}
+      >
+        <p dangerouslySetInnerHTML={{ __html: message }} />
+      </div>
     </div>
   ) : (
     <div>Cargando...</div>

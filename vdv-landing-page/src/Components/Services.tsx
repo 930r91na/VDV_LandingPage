@@ -56,10 +56,10 @@ const Services = () => {
             <LocationDeliveryChecker />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
+        <div className="flex flex-col md:flex-row  items-center gap-8 mt-8">
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold">Servicio 24 horas</h2>
-            <p className="text-lg leading-relaxed my-4">
+            <h2 className="text-3xl font-bold ">Servicio 24 horas</h2>
+            <p className="text-lg leading-relaxed my-4 ">
               Nuestro dispensador de agua 24 horas está disponible para ti en
               cualquier momento del día. Mira el video a continuación para
               aprender cómo usarlo. Por medio de este puedes llenar por tu

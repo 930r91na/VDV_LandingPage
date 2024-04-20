@@ -32,7 +32,7 @@ const AnnouncementBanner = ({
               {message}
             </p>
           </div>
-          <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+          <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3 text-white">
             <button
               type="button"
               className={`-mr-1 flex p-2 rounded-md  focus:outline-none sm:-mr-2`}
