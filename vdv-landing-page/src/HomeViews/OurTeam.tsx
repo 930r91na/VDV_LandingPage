@@ -25,7 +25,7 @@ const OurTeam = () => {
               <h1>Nosotros</h1>
             </div>
 
-            <div className="pt-8 flex flex-col justify-center">
+            <div className="div">
               <p>
               En Agua Valle del Volcán, somos un equipo comprometido con la salud y el bienestar de nuestra comunidad, dedicados a proporcionar agua purificada de la más alta calidad. Con una herencia arraigada en la riqueza natural de nuestra región, trabajamos con pasión y tecnología avanzada para garantizar cada gota que ofrecemos es sinónimo de confianza y pureza.
               </p>

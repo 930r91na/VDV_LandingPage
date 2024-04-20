@@ -24,10 +24,11 @@ const Services = () => {
         <div className="flex flex-col items-center max-w-full mx-auto my-2">
           <img src={Instore} alt="Instore" className="w-60 h-60" />
           <div className="text-center">
-            <h2 className="pt-5 text-lg font-semibold text-slate-900">
+            <h2 className="subtitulo">
               Servicio a domicilio
             </h2>
-            <p className="text-sm my-2">¡Llevamos la frescura de nuestra agua purificada hasta tu hogar!</p>{" "}
+            <p className="services">
+              ¡Llevamos la frescura de nuestra agua purificada hasta tu hogar!</p>{" "}
             <Button
               text="Más información"
               variant="primary"
@@ -39,10 +40,11 @@ const Services = () => {
         <div className="flex flex-col items-center max-w-full mx-auto my-2">
           <img src={Delivery} alt="Delivery" className="w-60 h-60" />
           <div className="text-center">
-            <h2 className="pt-5 text-lg font-semibold text-slate-900">
+            <h2 className="subtitulo">
               Compra en tienda
             </h2>
-            <p className="text-sm my-2">¡Visítanos y adquiere tu agua!</p>{" "}
+            <p className="services">
+              ¡Visítanos y adquiere tu agua!</p>{" "}
             <Button
               text="Más información"
               variant="primary"

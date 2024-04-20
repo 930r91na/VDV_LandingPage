@@ -33,7 +33,7 @@ const demoTestimonials = [
 ];
 
 export default function EmblaCarouselTestimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });//, [Autoplay()]);
 
   useEffect(() => {
     if (emblaApi) {
