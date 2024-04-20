@@ -6,6 +6,7 @@
     text-align: justify;
     text-justify: inter-word;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
 .services {
@@ -20,3 +21,11 @@
     font-weight: 600;
     color: #1e3a8a;
 }
+
+.div_2 {
+    text-align: justify;
+    text-justify: inter-word;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+  }

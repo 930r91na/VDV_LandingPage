@@ -10,7 +10,7 @@ const TeamInfo = () => {
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Nosotros
           </h1>
-          <p className="pb-4 pt-4">
+          <p className="div">
             En Agua Valle del Volcán, nuestra misión trasciende la simple
             distribución de agua; buscamos ser guardianes de la pureza y
             custodios de la salud de nuestras familias. Con orígenes
@@ -29,7 +29,7 @@ const TeamInfo = () => {
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Nuestro Equipo
           </h1>
-          <p className="pb-4 pt-4">
+          <p className="div">
             Nuestro equipo de Agua Valle del Volcán, desde dedicados
             repartidores hasta meticulosos empleados, son el corazón de nuestra
             operación, trabajando unidos para garantizar que cada botella
@@ -45,7 +45,7 @@ const TeamInfo = () => {
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Misión
             </h1>
-            <p>
+            <p className="div_2">
             Proporcionar agua purificada de calidad óptima, caracterizada por su equilibrio perfecto de sales para la hidratación humana y la preparación de alimentos. Ofrecer un servicio puntual y oportuno.
             </p>
           </div>
@@ -53,7 +53,7 @@ const TeamInfo = () => {
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Vision
             </h1>
-            <p>
+            <p className="div_2">
             Convertirnos en el principal referente de calidad, servicio e hidratación en Puebla, siendo reconocidos por nuestra agua purificada de alta calidad y nuestro compromiso constante con la satisfacción del cliente. Buscamos expandir nuestras operaciones a través de alianzas estratégicas con restaurantes, fraccionamientos y domicilios particulares que impulsen el crecimiento conjunto y la excelencia en el servicio.
             </p>
           </div>

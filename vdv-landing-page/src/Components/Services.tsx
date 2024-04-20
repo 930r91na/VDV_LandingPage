@@ -36,7 +36,7 @@ const Services = () => {
                 <h2 className="text-2xl font-bold">
                   Compra en tienda
                 </h2>
-                <p className="text-sm font-light">
+                <p className="services">
                   Puedes visitarnos en nuestra ubicación para comprar garrafones. Estamos ubicados en:
                   <address className="not-italic">
                     <div>Cam. Real a San Andrés 1230</div>
@@ -50,7 +50,7 @@ const Services = () => {
           </div>
 
           <h2 className="text-3xl font-bold">A domicilio</h2>
-          <p className="my-4">
+          <p className="services">
             Inserta tu ubicación para verificar si ofrecemos servicio a
             domicilio en tu área. Si no es así, puedes visitarnos en nuestra
             ubicación o llamar para tratar la posibilidad de un servicio
@@ -62,7 +62,7 @@ const Services = () => {
             <div className="w-full sm:w-1/2">
               <h2 className="text-3xl font-bold mt-10">Servicio 24 horas</h2>
               <div className="pt-8 pr-8 flex flex-col justify-center">
-                <p className=" my-4">
+                <p className=" services">
                   Nuestro dispensador de agua 24 horas está disponible para ti en
                   cualquier momento del día. Mira el video a continuación para
                   aprender cómo usarlo. Por medio de este puedes llenar por tu

@@ -126,7 +126,7 @@ const ProcessSteps = () => {
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Nuestro Proceso
         </h1>
-        <p>
+        <p className="div_2">
           Nuestro proceso de purificación en Agua Valle del Volcán es un compromiso con la excelencia. Comienza con la captación cuidadosa del agua, seguida por una serie de pasos meticulosos: filtración a través de arena y carbón activado, suavización con tecnología de ablandamiento, y desinfección con electrólisis. A esto se suma la ozonificación y la luz ultravioleta para una pureza máxima, culminando en el llenado higiénico y la entrega puntual a nuestros clientes. Cada etapa es supervisada para asegurar que el agua que llega a ti es de la mejor calidad.        </p>
         {OurProcessSteps.map((step, index) => (
           <div
