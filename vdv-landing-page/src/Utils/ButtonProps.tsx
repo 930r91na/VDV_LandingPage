@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ text, variant, onClick }) => {
   const baseClasses =
-    "rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
+    "rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-4";
     const variantStyles = {
       primary: {
         backgroundColor: colors.nightBlueShade,
