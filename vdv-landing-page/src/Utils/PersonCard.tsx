@@ -1,5 +1,4 @@
 import React from "react";
-import color from "../assets/ColorPalette";
 interface PersonProps {
   name: string;
   imageUrl: string;
@@ -15,7 +14,7 @@ const PersonCard: React.FC<PersonProps> = (person) => {
           <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
             {person.name}
           </h3>
-          <p className="text-sm font-semibold leading-6" style={{ color: color.darkBlueDeep }}>
+          <p className="text-sm font-semibold leading-6 dark-blue-deep">
             {person.role}
           </p>
         </div>

@@ -1,74 +1,91 @@
-import React, { useEffect } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
+import React, { useEffect, useRef } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import ProductCard from "../Utils/ProductsCard";
 import botella from "../assets/b1.jpg";
 import garrafon from "../assets/garrafon.png";
 import botella2 from "../assets/b2.jpg";
 import garrafon2 from "../assets/garrafon2.png";
 
-const OurProducts = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+const productos = [
+  {
+    nombre: "Botella de 100 ml",
+    precio: 15,
+    imagen: botella,
+    description: "Agua purificada en botella pequeña.",
+  },
+  {
+    nombre: "Botella de 500 ml",
+    precio: 20,
+    imagen: botella2,
+    description: "Ideal para la oficina o uso personal.",
+  },
+  {
+    nombre: "Garrafón Epura: 20 lts",
+    precio: 50,
+    imagen: garrafon,
+    description: "Perfecto para el hogar o grandes eventos.",
+  },
+  {
+    nombre: "Garragón Bonafont: 20 lts",
+    precio: 15,
+    imagen: garrafon2,
+    description: "Llenado con agua purificada.",
+  },
+  {
+    nombre: "Mini botella de 100 ml",
+    precio: 15,
+    imagen: botella,
+    description: "Agua purificada en botella pequeña.",
+  },
+  {
+    nombre: "Garrafón Ciel: 20 lts",
+    precio: 50,
+    imagen: garrafon,
+    description: "Perfecto para el hogar o grandes eventos.",
+  },
+];
 
-  useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes()) // Access API
-    }
-  }, [emblaApi])
+const OurProducts = () => {
+  const [emblaRef, embla] = useEmblaCarousel({
+    loop: true,
+    slidesToScroll: 1,
+    containScroll: "trimSnaps",
+  });
 
   return (
-    <section>
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="font-bold tracking-tight text-gray-900 sm:text-4xl">
-          <h1>Productos</h1>
+    <section className="p-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h1 className="font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Productos
+        </h1>
+      </div>
+      <div className="mx-auto max-w-7xl">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex -mx-2">
+            {" "}
+            {/* Adjusted margin for better spacing */}
+            {productos.map((producto, index) => (
+              <div
+                className="px-2 flex-none w-full sm:w-1/2 lg:w-1/3" // Responsive breakpoints
+                key={index}
+              >
+                <div className="py-4">
+                  {" "}
+                  {/* Added vertical padding */}
+                  <ProductCard
+                    name={producto.nombre}
+                    description={producto.description}
+                    price={producto.precio}
+                    imageUrl={producto.imagen}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    <div className="flex flex-wrap">
-        <div className="product-container">
-            <div className="subtitulo centrar-contenido">
-                <h1>Botella de 100 ml</h1>
-                <img
-                className="h-32 w-32 md:h-48 md:w-48 rounded object-cover" 
-                src={botella} />
-                <p className="text-lg font-semibold leading-6 text-gray-800">
-                    Precio: ${15}
-                </p>
-            </div>
-        </div>
-        <div className="product-container">
-            <div className="subtitulo centrar-contenido">
-                <h1>Botella de 500 ml</h1>
-                <img 
-                className="h-32 w-32 md:h-48 md:w-48 rounded object-cover"
-                src={botella2} />
-                <p className="text-lg font-semibold leading-6 text-gray-800">
-                    Precio: ${20}
-                </p>
-            </div>
-        </div>
-        <div className="product-container">
-            <div className="subtitulo centrar-contenido">
-                <h1>Garrafón de 20 lts</h1>
-                <img
-                className="h-32 w-32 md:h-48 md:w-48 rounded object-cover"
-                src={garrafon}/>
-                <p className="text-lg font-semibold leading-6 text-gray-800">
-                    Precio: ${50}
-                </p>
-            </div>
-        </div>
-        <div className="product-container">
-            <div className="subtitulo centrar-contenido">
-                <h1>Llenado de garrafón de agua pruficiada</h1>
-                <img
-                className="h-32 w-32 md:h-48 md:w-48 rounded object-cover"
-                src={garrafon2} />
-                <p className="text-lg font-semibold leading-6 text-gray-800">
-                    Precio: ${15}
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
   );
-}
+};
 
 export default OurProducts;

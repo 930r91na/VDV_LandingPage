@@ -23,7 +23,7 @@ const OurProcess = () => {
   };
 
   return (
-    <section className="pt-20 flex justify-center">
+    <section className="p-10 flex justify-center">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-gray-900">
           Calidad del Agua Certificada por

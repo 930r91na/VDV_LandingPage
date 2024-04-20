@@ -10,7 +10,7 @@ const OurTeam = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <section className="pt-20">
+    <section className="p-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
         <div className="flex items-center justify-center">

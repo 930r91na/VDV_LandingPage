@@ -6,7 +6,14 @@ const HeroContent = () => {
   return (
     <section className="relative pt-10">
       {/* Background image container */}
-      <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `url(${HeroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
       <BackgroundGradient
@@ -25,9 +32,7 @@ const HeroContent = () => {
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             Valle del Volcán
           </h1>
-          <p className="mt-6 text-lg leading-8">
-            Tu purificadora de agua
-          </p>
+          <p className="mt-6 text-lg leading-8">Tu purificadora de agua</p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             {/* Buttons go here */}
           </div>

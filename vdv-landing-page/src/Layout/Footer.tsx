@@ -3,10 +3,10 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-blue-100 to-transparent text-sm font-semibold leading-6 text-gray-500">
-      <div className="container mx-auto flex justify-between items-center py-5 px-10">
-        {/* TODO: ADD Social Links */}
-        <div className="flex items-center space-x-4">
+    <footer className="bg-gradient-to-t from-blue-100 to-transparent text-xs sm:text-sm md:text-base font-semibold leading-6 text-gray-500">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center py-3 px-5 sm:py-5 sm:px-10">
+        {/* Social Links */}
+        <div className="flex items-center space-x-2 sm:space-x-4">
           <a
             href="https://www.instagram.com"
             target="_blank"
@@ -14,7 +14,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:text-blue-200"
           >
-            <FaInstagram className="h-6 w-6" />
+            <FaInstagram className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
           <a
             href="https://www.facebook.com"
@@ -23,18 +23,18 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:text-blue-200"
           >
-            <FaFacebook className="h-6 w-6" />
+            <FaFacebook className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
         </div>
 
         {/* Contact Info */}
-        <div className="text-sm">
-          <PhoneIcon className="inline h-6 w-6 mr-2" /> Contáctanos: 221 530 4660
+        <div className="mt-4 sm:mt-0 text-xs sm:text-sm">
+          <PhoneIcon className="inline h-5 w-5 sm:h-6 sm:w-6 mr-1 sm:mr-2" /> Contáctanos: 221 530 4660
         </div>
 
         {/* Additional Information */}
-        <div>
-          <p className="text-sm">
+        <div className="mt-4 sm:mt-0">
+          <p className="text-xs sm:text-sm">
             © 2024 Valle del Volcan. Todos los derechos reservados.
           </p>
         </div>

@@ -17,7 +17,6 @@ type NavigationProps = {
   OurTeamRef: React.RefObject<HTMLElement>;
 };
 
-// TODO: Solve navigation for mobile format
 export default function Navigation({
   mobileMenuOpen,
   setMobileMenuOpen,

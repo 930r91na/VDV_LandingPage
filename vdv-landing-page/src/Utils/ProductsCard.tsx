@@ -12,21 +12,22 @@ const ProductCard: React.FC<ProductProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
+    <div className="bg-gradient-to-t from-blue-100 to-transparent p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <div className="flex flex-col items-center space-y-4">
+            <h3 className="text-lg md:text-xl font-semibold text-gray-900">{name}</h3>
             <img
-                className="h-32 w-32 md:h-48 md:w-48 rounded object-cover"
+                className="h-40 w-40 md:h-56 md:w-56 rounded-lg object-cover" // Responsive images
                 src={imageUrl}
                 alt={name}
             />
-            <div className="text-center mt-2">
-                <p className="text-sm font-medium leading-6 text-gray-600">
+            <div className="text-center">
+                <p className="text-sm md:text-base text-black-200 mt-2">
                     {description}
                 </p>
             </div>
-            <div className="self-start text-left">
-                <p className="text-lg font-semibold leading-6 text-gray-800">
-                    ${price}
+            <div className="self-stretch text-center mt-4">
+                <p className="text-xl font-bold text-black-100">
+                    Precio: ${price} 
                 </p>
             </div>
         </div>

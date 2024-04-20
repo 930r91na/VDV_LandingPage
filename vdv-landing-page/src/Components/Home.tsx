@@ -13,11 +13,12 @@ export default function Home() {
     <>
       <HeroContent />
       <OurServices />
-      <EmblaCarouselTestimonials />
       <OurProducts />
       <Certificate />
       <OurTeam />
       <OurProcess />
+      <EmblaCarouselTestimonials />
+
 
       <FloatingWhatsApp
         //TODO: Replace this with correct information
